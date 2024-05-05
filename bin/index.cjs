@@ -1,7 +1,10 @@
 #!/usr/bin/env node
+const { config } = require("dotenv");
 const yargs = require("yargs/yargs");
 const { hideBin } = require("yargs/helpers");
 const { scan } = require("./scan.cjs");
+
+config();
 
 yargs(hideBin(process.argv))
   .command(
@@ -9,24 +12,32 @@ yargs(hideBin(process.argv))
     "scan the repository",
     (yargs) => {
       return yargs
-        .positional("projectRoot", {
+        .option("projectRoot", {
           describe: "project root",
           default: "./",
+          type: "string",
         })
-        .positional("srcDirPath", {
-          describe: "path to src directory",
-          default: "./src",
+        .option("apiKey", {
+          describe: "api key to use in API requests",
+          type: "string",
         })
-        .positional("pkgJsonPath", {
-          describe: "path to package.json",
-          default: "./package.json",
+        .option("projectExternalId", {
+          describe: "external id of the project to write the report",
+          type: "string",
+        })
+        .option("serverUrl", {
+          type: "string",
+          deprecated: true,
         });
     },
     (argv) => {
       scan({
         projectRoot: argv.projectRoot,
-        srcDirPath: argv.srcDirPath,
-        pkgJsonPath: argv.pkgJsonPath,
+        apiKey: argv.apiKey ?? process.env.NYSA_SCANNER_API_KEY,
+        projectExternalId:
+          argv.projectExternalId ??
+          process.env.NYSA_SCANNER_PROJECT_EXTERNAL_ID,
+        serverUrl: argv.serverUrl ?? process.env.NYSA_SCANNER_SERVER_URL,
         logLevel: argv.logLevel,
       });
     }
