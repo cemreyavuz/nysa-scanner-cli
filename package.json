@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cemreyavuz/nysa-scanner-cli#readme",
   "devDependencies": {
+    "nysa-scanner": "^0.0.3",
     "yargs": "^17.7.2"
   }
 }
