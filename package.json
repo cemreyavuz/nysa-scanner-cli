@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cemreyavuz/nysa-scanner-cli#readme",
   "devDependencies": {
     "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
     "nysa-scanner": "^0.0.7",
     "yargs": "^17.7.2"
   }
