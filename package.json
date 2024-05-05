@@ -1,0 +1,23 @@
+{
+  "name": "nysa-scanner-cli",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {
+    "nysa-scanner": "/bin/index.cjs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cemreyavuz/nysa-scanner-cli.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/cemreyavuz/nysa-scanner-cli/issues"
+  },
+  "homepage": "https://github.com/cemreyavuz/nysa-scanner-cli#readme",
+  "devDependencies": {
+    "yargs": "^17.7.2"
+  }
+}
