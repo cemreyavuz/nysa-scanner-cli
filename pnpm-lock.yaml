@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       nysa-scanner:
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.5
+        version: 0.0.5
       yargs:
         specifier: ^17.7.2
         version: 17.7.2
@@ -185,8 +185,8 @@ packages:
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
-  nysa-scanner@0.0.3:
-    resolution: {integrity: sha512-ih1DplfB7GyKynBXT9ufCAXl/ybYOWXYd0Sq4Pxmxx52UJpNBccV72AoFLKUhP0TI6ZiCArxPOXekdvgEu8zOg==}
+  nysa-scanner@0.0.5:
+    resolution: {integrity: sha512-irmhcrZWn8CvVVLQEINSGYCYcZjK68f7sQuWKB+YJsKZrbd0xSOWr/ydA5FchoUW36IcClXf0xrXMH6hgyKYgw==}
 
   path-type@4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
@@ -421,7 +421,7 @@ snapshots:
 
   ms@2.1.2: {}
 
-  nysa-scanner@0.0.3:
+  nysa-scanner@0.0.5:
     dependencies:
       react-scanner: 1.1.0
     transitivePeerDependencies:
